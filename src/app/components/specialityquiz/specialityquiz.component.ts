@@ -28,11 +28,11 @@ constructor(
   public yeoman: Yeoman
 ){this.ngFormRequest = this.formBuilder.group({
   r1: ['', Validators.requiredTrue],
-  /* r2: ['', Validators.requiredTrue],
+  r2: ['', Validators.requiredTrue],
   r3: ['', Validators.requiredTrue],
   r4: ['', Validators.requiredTrue],
   r5: ['', Validators.requiredTrue],
-  r6: ['', Validators.requiredTrue] */
+  r6: ['', Validators.requiredTrue]
 });
 }
 
@@ -66,7 +66,7 @@ this.dataApiService.sendSpecialist(data).subscribe(
     Swal.fire({
       icon: 'success',
       title: 'Éxito',
-      text: 'Solicitud guardada correctamente.'
+      text: 'Encuesta enviada, Gracias por su participación.'
     }).then(() => {
       // Limpiar los valores para futuros usos
       this.global.request = '';
@@ -98,11 +98,11 @@ this.dataApiService.sendSpecialist(data).subscribe(
 ngOnInit(): void {
 this.ngFormRequest = this.formBuilder.group({
   r1: ['', Validators.requiredTrue],
-  /* r2: ['', Validators.requiredTrue],
+  r2: ['', Validators.requiredTrue],
   r3: ['', Validators.requiredTrue],
   r4: ['', Validators.requiredTrue],
   r5: ['', Validators.requiredTrue],
-  r6: ['', Validators.requiredTrue] */
+  r6: ['', Validators.requiredTrue]
 });
 }
 

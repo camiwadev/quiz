@@ -10,7 +10,7 @@
         </div> 
 
 
-        <!-- step 1 -->
+        <!-- steps -->
         <section class="steps">
             <div class="row h-100">
                 <div class="col-md-5 p-0 tab-100 order-c">
@@ -34,16 +34,15 @@
                         </div>
                         <div class="form-inner">
                             <div class="step-count">
-                                Encuenta para apoyar a la implementacion eficiente de Camiwa<span>1</span>/5
+                                Encuenta para apoyar a la implementacion eficiente de Camiwa<span>1</span>/6
                             </div>
 
                             <!-- Question -->
                             <h1 class="quiz-question">
-                                ¿Ha utilizado alguna vez una plataforma digital para buscar y agendar citas con profesionales de la salud?                            </h1>
-
+                                ¿Utiliza actualmente alguna plataforma digital para gestionar sus citas o consultas?</h1>
                             <!-- form fields -->
                             <fieldset id="step1">
-                                <div class="radio-field bounce-left" [ngClass]="{ 'is-invalid': submitted && f['r1'].errors }">
+                                <div class="radio-field bounce-left" [ngClass]="{ 'is-invalid': submitted && f['r2'].errors }">
                                   <input type="radio" id="r1" name="r1" value="yes" formControlName="r1">
                                   <label for="r1">Sí</label>
                                   <div class="radio-icon">
@@ -77,10 +76,10 @@
                     <div class="side">
 
 <!--                         next prev button
- -->                        <div class="next-prev">
+ -->                        <!-- <div class="next-prev">
                             <button type="button" class="prev"><i class="fa-solid fa-arrow-left"></i>last question</button>
                             <button type="button" class="next" id="step4btn">next question<i class="fa-solid fa-arrow-right"></i></button>
-                        </div>
+                        </div> -->
 
                         <!-- side background -->
                         <img class="side-bg" src="assets/quiz/images/side-img.jpg" alt="side image">
@@ -95,52 +94,42 @@
                         </div>
                         <div class="form-inner">
                             <div class="step-count">
-                                Question <span>4</span>/5
+                                Encuenta para apoyar a la implementacion eficiente de Camiwa<span>2</span>/6
                             </div>
 
                             <!-- Question -->
                             <h1 class="quiz-question">
-                                Which former British colony was given back to China in 1997?
-                            </h1>
+                                ¿Estaría dispuesto a pagar por una suscripción que incluya estas características?                             </h1>
 
                             <!-- form fields -->
-                            <fieldset id="step4">
-                                <div class="radio-field bounce-left">
-                                    <input type="radio" name="op4" value="Russia">
-                                    <label class="op1">Russia</label>
-                                    <div class="radio-icon">
-                                        <i class="fa-solid fa-ban"></i>
-                                    </div>
+                            <fieldset id="step2">
+                                <div class="radio-field bounce-left" [ngClass]="{ 'is-invalid': submitted && f['r2'].errors }">
+                                  <input type="radio" id="r2" name="r2" value="yes" formControlName="r2">
+                                  <label for="r2">Sí</label>
+                                  <div class="radio-icon">
+                                    <i class="fa-solid fa-check"></i>
+                                  </div>
                                 </div>
-                                <div class="radio-field bounce-left delay-100">
-                                    <input type="radio" name="op4" value="America">
-                                    <label class="op2">America</label>
-                                    <div class="radio-icon">
-                                        <i class="fa-solid fa-lightbulb"></i>
-                                    </div>
+                                <div *ngIf="submitted && f['r2'].errors" class="invalid-feedback">
+                                  <div *ngIf="f['r2'].errors['required']">Respuesta es obligatoria.</div>
                                 </div>
-                                <div class="radio-field bounce-left delay-200">
-                                    <input type="radio" name="op4" value="Australia">
-                                    <label class="op3">Australia</label>
-                                    <div class="radio-icon">
-                                        <i class="fa-solid fa-person-military-pointing"></i>
-                                    </div>
+                            
+                                <div class="radio-field bounce-left delay-100" [ngClass]="{ 'is-invalid': submitted && f['r2'].errors }">
+                                  <input type="radio" id="r2-no" name="r2" value="no" formControlName="r2">
+                                  <label for="r2-no">No</label>
+                                  <div class="radio-icon">
+                                    <i class="fa-solid fa-times"></i>
+                                  </div>
                                 </div>
-                                <div class="radio-field bounce-left delay-300">
-                                    <input type="radio" name="op4" value="Hong Kong">
-                                    <label class="op4">Hong Kong</label>
-                                    <div class="radio-icon">
-                                        <i class="fa-solid fa-weight-hanging"></i>
-                                    </div>
+                                <div *ngIf="submitted && f['r2'].errors" class="invalid-feedback">
+                                  <div *ngIf="f['r2'].errors['required']">Respuesta es obligatoria.</div>
                                 </div>
-                            </fieldset>
+                              </fieldset>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
-         <!-- step 5 -->
          <section class="steps">
             <div class="row h-100">
                 <div class="col-md-5 p-0 tab-100 order-c">
@@ -165,45 +154,210 @@
                         </div>
                         <div class="form-inner">
                             <div class="step-count">
-                                Question <span>5</span>/5
+                                Encuenta para apoyar a la implementacion eficiente de Camiwa<span>3</span>/6
                             </div>
 
                             <!-- Question -->
                             <h1 class="quiz-question">
-                                For which of the following disciplines is Nobel Prize awarded?
-                            </h1>
+                            ¿Cuánto estaría dispuesto a pagar mensualmente por una suscripción que incluya estas características?                            </h1>
 
                             <!-- form fields -->
+                            <fieldset id="step3">
+                                <div class="radio-field bounce-left" [ngClass]="{ 'is-invalid': submitted && f['r3'].errors }">
+                                  <input type="radio" id="r3" name="r3" value="50" formControlName="r3">
+                                  <label for="r3">Menos de $50,000 COP
+                                </label>
+                                  <div class="radio-icon">
+                                    <i class="fa-solid fa-check"></i>
+                                  </div>
+                                </div>
+                                <div *ngIf="submitted && f['r3'].errors" class="invalid-feedback">
+                                  <div *ngIf="f['r3'].errors['required']">Respuesta es obligatoria.</div>
+                                </div>
+                            
+                                <div class="radio-field bounce-left delay-100" [ngClass]="{ 'is-invalid': submitted && f['r3'].errors }">
+                                  <input type="radio" id="r3-no" name="r3" value="50 a 100" formControlName="r3">
+                                  <label for="r3-50 a 100"> Entre $50,000 - $100,000 COP
+                                </label>
+                                  <div class="radio-icon">
+                                    <i class="fa-solid fa-times"></i>
+                                  </div>
+                                </div>
+                                <div *ngIf="submitted && f['r3'].errors" class="invalid-feedback">
+                                  <div *ngIf="f['r3'].errors['required']">Respuesta es obligatoria.</div>
+                                </div>
+                                <div class="radio-field bounce-left delay-100" [ngClass]="{ 'is-invalid': submitted && f['r3'].errors }">
+                                    <input type="radio" id="r3-no" name="r3" value="100" formControlName="r3">
+                                    <label for="r3-100"> Más de $100,000 COP
+                                  </label>
+                                    <div class="radio-icon">
+                                      <i class="fa-solid fa-times"></i>
+                                    </div>
+                                  </div>
+                                  <div *ngIf="submitted && f['r3'].errors" class="invalid-feedback">
+                                    <div *ngIf="f['r3'].errors['required']">Respuesta es obligatoria.</div>
+                                  </div>
+                              </fieldset>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="steps">
+            <div class="row h-100">
+                <div class="col-md-5 p-0 tab-100 order-c">
+                    <div class="side">
+
+                        <!-- next prev button
+                        <div class="next-prev">
+                            <button type="button" class="prev"><i class="fa-solid fa-arrow-left"></i>last question</button>
+                            <button type="button" class="next" id="sub">Submit<i class="fa-solid fa-arrow-right"></i></button>
+                        </div> -->
+
+                        <!-- side background -->
+                        <img class="side-bg" src="assets/quiz/images/side-img.jpg" alt="side image">
+                    </div>
+                </div>
+                <div class="col-md-7 p-0 tab-100">
+                    <div class="steps-inner">
+
+                        <!-- step bar -->
+                        <div class="step-bar">
+                            <div class="fill"></div>
+                        </div>
+                        <div class="form-inner">
+                            <div class="step-count">
+                                Encuenta para apoyar a la implementacion eficiente de Camiwa<span>4</span>/6
+                            </div>
+
+                            <!-- Question -->
+                            <h1 class="quiz-question">
+                             ¿Qué características valora más en una plataforma digital para la gestión de citas?
+                             </h1>
+                             
+                            <!-- form fields -->
+                            <fieldset id="step4">
+                                <div class="radio-field bounce-left" [ngClass]="{ 'is-invalid': submitted && f['r3'].errors }">
+                                  <input type="radio" id="r3" name="r3" value="Videollamadas" formControlName="r3">
+                                  <label for="r3">Videollamadas
+                                </label>
+                                  <div class="radio-icon">
+                                    <i class="fa-solid fa-check"></i>
+                                  </div>
+                                </div>
+                                <div *ngIf="submitted && f['r3'].errors" class="invalid-feedback">
+                                  <div *ngIf="f['r3'].errors['required']">Respuesta es obligatoria.</div>
+                                </div>
+                            
+                                <div class="radio-field bounce-left delay-100" [ngClass]="{ 'is-invalid': submitted && f['r3'].errors }">
+                                  <input type="radio" id="r3-Agenda" name="r3" value="Agenda de citas " formControlName="r3">
+                                  <label for="r3-Agenda de citas "> Agenda de citas 
+                                </label>
+                                  <div class="radio-icon">
+                                    <i class="fa-solid fa-times"></i>
+                                  </div>
+                                </div>
+                                <div *ngIf="submitted && f['r3'].errors" class="invalid-feedback">
+                                  <div *ngIf="f['r3'].errors['required']">Respuesta es obligatoria.</div>
+                                </div>
+                                <div class="radio-field bounce-left delay-100" [ngClass]="{ 'is-invalid': submitted && f['r3'].errors }">
+                                    <input type="radio" id="r3-ficha" name="r3" value="ficha medica" formControlName="r3">
+                                    <label for="r3-ficha medica"> Ficha medica del paciente
+                                  </label>
+                                    <div class="radio-icon">
+                                      <i class="fa-solid fa-times"></i>
+                                    </div>
+                                  </div>
+                                  <div *ngIf="submitted && f['r3'].errors" class="invalid-feedback">
+                                    <div *ngIf="f['r3'].errors['required']">Respuesta es obligatoria.</div>
+                                  </div>
+                                  <div class="radio-field bounce-left delay-100" [ngClass]="{ 'is-invalid': submitted && f['r3'].errors }">
+                                    <input type="radio" id="r3-Recordatorios" name="r3" value="Recordatorios" formControlName="r3">
+                                    <label for="r3-Recordatorios"> Recordatorios automáticos
+                                  </label>
+                                    <div class="radio-icon">
+                                      <i class="fa-solid fa-times"></i>
+                                    </div>
+                                  </div>
+                                  <div *ngIf="submitted && f['r3'].errors" class="invalid-feedback">
+                                    <div *ngIf="f['r3'].errors['required']">Respuesta es obligatoria.</div>
+                                  </div>
+                              </fieldset>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="steps">
+            <div class="row h-100">
+                <div class="col-md-5 p-0 tab-100 order-c">
+                    <div class="side">
+
+                        <!-- next prev button
+                        <div class="next-prev">
+                            <button type="button" class="prev"><i class="fa-solid fa-arrow-left"></i>last question</button>
+                            <button type="button" class="next" id="sub">Submit<i class="fa-solid fa-arrow-right"></i></button>
+                        </div> -->
+
+                        <!-- side background -->
+                        <img class="side-bg" src="assets/quiz/images/side-img.jpg" alt="side image">
+                    </div>
+                </div>
+                <div class="col-md-7 p-0 tab-100">
+                    <div class="steps-inner">
+
+                        <!-- step bar -->
+                        <div class="step-bar">
+                            <div class="fill"></div>
+                        </div>
+                        <div class="form-inner">
+                            <div class="step-count">
+                                Encuenta para apoyar a la implementacion eficiente de Camiwa<span>5</span>/6
+                            </div>
+
+                            <!-- Question -->
+                            <h1 class="quiz-question">
+                                8. ¿Cuánto tiempo considera adecuado para que una publicación promocional esté visible?                             </h1>
+                             
+                            <!-- form fields -->
                             <fieldset id="step5">
-                                <div class="radio-field bounce-left">
-                                    <input type="radio" name="op5" value="Physics and Chemistry">
-                                    <label class="op1">Physics and Chemistry</label>
-                                    <div class="radio-icon">
-                                        <i class="fa-solid fa-ban"></i>
-                                    </div>
+                                <div class="radio-field bounce-left" [ngClass]="{ 'is-invalid': submitted && f['r3'].errors }">
+                                  <input type="radio" id="r3" name="r3" value="7 días" formControlName="r3">
+                                  <label for="r3">7 días
+
+                                </label>
+                                  <div class="radio-icon">
+                                    <i class="fa-solid fa-check"></i>
+                                  </div>
                                 </div>
-                                <div class="radio-field bounce-left delay-100">
-                                    <input type="radio" name="op5" value="Physiology or Medicine">
-                                    <label class="op2">Physiology or Medicine</label>
-                                    <div class="radio-icon">
-                                        <i class="fa-solid fa-lightbulb"></i>
-                                    </div>
+                                <div *ngIf="submitted && f['r3'].errors" class="invalid-feedback">
+                                  <div *ngIf="f['r3'].errors['required']">Respuesta es obligatoria.</div>
                                 </div>
-                                <div class="radio-field bounce-left delay-200">
-                                    <input type="radio" name="op5" value="Literature Economics">
-                                    <label class="op3">Literature Economics</label>
-                                    <div class="radio-icon">
-                                        <i class="fa-solid fa-person-military-pointing"></i>
-                                    </div>
+                            
+                                <div class="radio-field bounce-left delay-100" [ngClass]="{ 'is-invalid': submitted && f['r3'].errors }">
+                                  <input type="radio" id="r3-14" name="r3" value="14 dias " formControlName="r3">
+                                  <label for="r3-14 dias "> 14 dias 
+                                </label>
+                                  <div class="radio-icon">
+                                    <i class="fa-solid fa-times"></i>
+                                  </div>
                                 </div>
-                                <div class="radio-field bounce-left delay-300">
-                                    <input type="radio" name="op5" value="All of the above">
-                                    <label class="op4">All of the above</label>
-                                    <div class="radio-icon">
-                                        <i class="fa-solid fa-weight-hanging"></i>
-                                    </div>
+                                <div *ngIf="submitted && f['r3'].errors" class="invalid-feedback">
+                                  <div *ngIf="f['r3'].errors['required']">Respuesta es obligatoria.</div>
                                 </div>
-                            </fieldset>
+                                <div class="radio-field bounce-left delay-100" [ngClass]="{ 'is-invalid': submitted && f['r3'].errors }">
+                                    <input type="radio" id="r3-ficha" name="r3" value="30 dias" formControlName="r3">
+                                    <label for="r3-30 dias"> 30 dias
+                                  </label>
+                                    <div class="radio-icon">
+                                      <i class="fa-solid fa-times"></i>
+                                    </div>
+                                  </div>
+                                  <div *ngIf="submitted && f['r3'].errors" class="invalid-feedback">
+                                    <div *ngIf="f['r3'].errors['required']">Respuesta es obligatoria.</div>
+                                  </div>
+                                  
+                              </fieldset>
                         </div>
                     </div>
                 </div>

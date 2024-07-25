@@ -1,1 +1,242 @@
-<p>patientquiz works!</p>
+<main class="overflow-hidden">
+    <form method="POST" class="show-section" [formGroup]="ngFormPatients" (ngSubmit)="quizsPatients()">
+
+        <!-- countdown -->
+       <!--  <div (click)="global.setRoute('home')" class="coming-soon-countdown radio-field bounce-left">
+            
+        </div> -->
+        <div class="next-prev1">
+            <button (click)="global.setRoute('home')" type="button" class="next">Volver a inicio<i class="fa-solid fa-arrow-right"></i></button>
+        </div> 
+
+
+        <!-- step 1 -->
+        <section class="steps">
+            <div class="row h-100">
+                <div class="col-md-5 p-0 tab-100 order-c">
+                    <div class="side">
+
+                        <!-- next prev button -->
+                        <!-- <div class="next-prev">
+                            <button type="button" class="next" id="step1btn">next question<i class="fa-solid fa-arrow-right"></i></button>
+                        </div>  -->
+
+                        <!-- side background -->
+                        <img class="side-bg" src="assets/quiz/images/side-img.jpg" alt="side image">
+                    </div>
+                </div>
+                <div class="col-md-7 p-0 tab-100">
+                    <div class="steps-inner">
+
+                        <!-- step bar -->
+                        <div class="step-bar">
+                            <div class="fill"></div>
+                        </div>
+                        <div class="form-inner">
+                            <div class="step-count">
+                                Encuenta para apoyar a la implementacion eficiente de Camiwa<span>1</span>/6
+                            </div>
+
+                            <!-- Question -->
+                            <h1 class="quiz-question">
+                                ¿Ha utilizado alguna vez una plataforma digital para buscar y agendar citas con profesionales de la salud?                            </h1>
+
+                            <!-- form fields -->
+                            <fieldset id="step1">
+                                <div class="radio-field bounce-left" [ngClass]="{ 'is-invalid': submitted && f['r1'].errors }">
+                                  <input type="radio" id="r1" name="r1" value="yes" formControlName="r1">
+                                  <label for="r1">Sí</label>
+                                  <div class="radio-icon">
+                                    <i class="fa-solid fa-check"></i>
+                                  </div>
+                                </div>
+                                <div *ngIf="submitted && f['r1'].errors" class="invalid-feedback">
+                                  <div *ngIf="f['r1'].errors['required']">Respuesta es obligatoria.</div>
+                                </div>
+                            
+                                <div class="radio-field bounce-left delay-100" [ngClass]="{ 'is-invalid': submitted && f['r1'].errors }">
+                                  <input type="radio" id="r1-no" name="r1" value="no" formControlName="r1">
+                                  <label for="r1-no">No</label>
+                                  <div class="radio-icon">
+                                    <i class="fa-solid fa-times"></i>
+                                  </div>
+                                </div>
+                                <div *ngIf="submitted && f['r1'].errors" class="invalid-feedback">
+                                  <div *ngIf="f['r1'].errors['required']">Respuesta es obligatoria.</div>
+                                </div>
+                              </fieldset>
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="steps">
+            <div class="row h-100">
+                <div class="col-md-5 p-0 tab-100 order-c">
+                    <div class="side">
+
+<!--                         next prev button
+ -->                        <!-- <div class="next-prev">
+                            <button type="button" class="prev"><i class="fa-solid fa-arrow-left"></i>last question</button>
+                            <button type="button" class="next" id="step4btn">next question<i class="fa-solid fa-arrow-right"></i></button>
+                        </div> -->
+
+                        <!-- side background -->
+                        <img class="side-bg" src="assets/quiz/images/side-img.jpg" alt="side image">
+                    </div>
+                </div>
+                <div class="col-md-7 p-0 tab-100">
+                    <div class="steps-inner">
+
+                        <!-- step bar -->
+                        <div class="step-bar">
+                            <div class="fill"></div>
+                        </div>
+                        <div class="form-inner">
+                            <div class="step-count">
+                                Encuenta para apoyar a la implementacion eficiente de Camiwa<span>2</span>/6
+                            </div>
+
+                            <!-- Question -->
+                            <h1 class="quiz-question">
+                                ¿Con qué frecuencia busca servicios de salud en línea?        
+                             </h1>
+
+                            <!-- form fields -->
+                            <fieldset id="step2">
+                                <div class="radio-field bounce-left" [ngClass]="{ 'is-invalid': submitted && f['r2'].errors }">
+                                  <input type="radio" id="r2" name="r2" value="Mensual" formControlName="r2">
+                                  <label for="r2">Mensual</label>
+                                  <div class="radio-icon">
+                                    <i class="fa-solid fa-check"></i>
+                                  </div>
+                                </div>
+                                <div *ngIf="submitted && f['r2'].errors" class="invalid-feedback">
+                                  <div *ngIf="f['r2'].errors['required']">Respuesta es obligatoria.</div>
+                                </div>
+                            
+                                <div class="radio-field bounce-left delay-100" [ngClass]="{ 'is-invalid': submitted && f['r2'].errors }">
+                                  <input type="radio" id="r2-no" name="r2" value="Trimestral" formControlName="r2">
+                                  <label for="r2-Trimestral">Trimestral</label>
+                                  <div class="radio-icon">
+                                    <i class="fa-solid fa-times"></i>
+                                  </div>
+                                </div>
+                                <div *ngIf="submitted && f['r2'].errors" class="invalid-feedback">
+                                  <div *ngIf="f['r2'].errors['required']">Respuesta es obligatoria.</div>
+                                </div>
+                                <div class="radio-field bounce-left delay-100" [ngClass]="{ 'is-invalid': submitted && f['r2'].errors }">
+                                    <input type="radio" id="r2-no" name="r2" value="Anual" formControlName="r2">
+                                    <label for="r2-Anual">Anual</label>
+                                    <div class="radio-icon">
+                                      <i class="fa-solid fa-times"></i>
+                                    </div>
+                                  </div>
+                                  <div *ngIf="submitted && f['r2'].errors" class="invalid-feedback">
+                                    <div *ngIf="f['r2'].errors['required']">Respuesta es obligatoria.</div>
+                                  </div>
+                              </fieldset>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!-- step 5 -->
+         <section class="steps">
+            <div class="row h-100">
+                <div class="col-md-5 p-0 tab-100 order-c">
+                    <div class="side">
+
+                        <!-- next prev button
+                        <div class="next-prev">
+                            <button type="button" class="prev"><i class="fa-solid fa-arrow-left"></i>last question</button>
+                            <button type="button" class="next" id="sub">Submit<i class="fa-solid fa-arrow-right"></i></button>
+                        </div> -->
+
+                        <!-- side background -->
+                        <img class="side-bg" src="assets/quiz/images/side-img.jpg" alt="side image">
+                    </div>
+                </div>
+                <div class="col-md-7 p-0 tab-100">
+                    <div class="steps-inner">
+
+                        <!-- step bar -->
+                        <div class="step-bar">
+                            <div class="fill"></div>
+                        </div>
+                        <div class="form-inner">
+                            <div class="step-count">
+                                Question <span>5</span>/5
+                            </div>
+
+                            <!-- Question -->
+                            <h1 class="quiz-question">
+                                For which of the following disciplines is Nobel Prize awarded?
+                            </h1>
+
+                            <!-- form fields -->
+                            <fieldset id="step5">
+                                <div class="radio-field bounce-left">
+                                    <input type="radio" name="op5" value="Physics and Chemistry">
+                                    <label class="op1">Physics and Chemistry</label>
+                                    <div class="radio-icon">
+                                        <i class="fa-solid fa-ban"></i>
+                                    </div>
+                                </div>
+                                <div class="radio-field bounce-left delay-100">
+                                    <input type="radio" name="op5" value="Physiology or Medicine">
+                                    <label class="op2">Physiology or Medicine</label>
+                                    <div class="radio-icon">
+                                        <i class="fa-solid fa-lightbulb"></i>
+                                    </div>
+                                </div>
+                                <div class="radio-field bounce-left delay-200">
+                                    <input type="radio" name="op5" value="Literature Economics">
+                                    <label class="op3">Literature Economics</label>
+                                    <div class="radio-icon">
+                                        <i class="fa-solid fa-person-military-pointing"></i>
+                                    </div>
+                                </div>
+                                <div class="radio-field bounce-left delay-300">
+                                    <input type="radio" name="op5" value="All of the above">
+                                    <label class="op4">All of the above</label>
+                                    <div class="radio-icon">
+                                        <i class="fa-solid fa-weight-hanging"></i>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+<!--         <button type="submit" class="sc-button btn-icon">Enviar</button>
+ -->        <div class="next-prev2">
+            <button (click)="global.setRoute('home')" type="submit" class="next">Enviar<i class="fa-solid fa-arrow-right"></i></button>
+        </div> 
+    </form>
+            <!-- result -->
+   <!--  <div class="loadingresult">
+        <img src="assets/quiz/images/loading.gif" alt="loading">
+    </div> -->
+
+   <!--  <div class="thankyou-page">
+        <header class="thankyouheader">
+            <h2>
+                Quiz has been taken
+            </h2>
+        </header>
+        <main class="thankyou-page-inner">
+            <img src="assets/quiz/images/thankyou-check.png" alt="">
+            <span>Your answer has been submitted</span>
+            <h1>Thankyou for taking Quiz</h1>
+            <div class="subscribe">
+                <input type="text" placeholder="Your Email">
+                <button type="button">subscribe now</button>
+            </div>
+        </main>
+    </div> -->
+</main>
