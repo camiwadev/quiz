@@ -1,0 +1,8 @@
+::ng-deep .mat-calendar-body-cell[disabled] {
+    pointer-events: none;
+    background-color: rgb(255, 255, 255);
+}
+
+::ng-deep .mat-calendar-body-cell.non-working-day .mat-calendar-body-cell-content {
+    background-color: rgba(255, 97, 86, 0.151); /* Ejemplo de color */
+}

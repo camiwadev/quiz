@@ -1,0 +1,122 @@
+/* large screens */
+@media (min-width: 1600px)
+{
+
+}
+
+
+@media (max-width: 1500px)
+{
+    .quiz-question
+    {
+        font-size: 45px;
+    }
+}
+
+
+/* Desktops/Laptops */
+@media (max-width: 1200px)
+{
+    .quiz-question
+    {
+        font-size: 35px;
+    }
+}
+
+/* Laptops */
+@media (max-width: 1024px)
+{
+    .next-prev button
+    {
+        margin: 0;
+        margin-bottom: 20px;
+    }
+    .next-prev .next
+    {
+        margin-left: 0;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px)
+{
+    .tab-100
+    {
+        width: 100%;
+    }
+    .order-c
+    {
+        order: 2;
+    }
+    #countdown
+    {
+        right: 35px;
+        left: auto;
+    }
+    .next-prev
+    {
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        background: rgb(255,255,255);
+        left: 0;
+        justify-content: space-between;
+        padding: 30px;
+
+    }
+    .next-prev button
+    {
+        margin: 0;
+    }
+}
+
+/* mobile */
+@media (max-width: 576px)
+{
+    #countdown
+    {
+        display: none;
+    }
+    .quiz-question
+    {
+        font-size: 25px;
+    }
+    fieldset
+    {
+        margin-top: 40px;
+    }
+    .radio-field label::before
+    {
+        font-size: 25px;
+        margin-right: 10px;
+    }
+    .radio-field label
+    {
+        font-size: 15px;
+    }
+    .radio-field
+    {
+        height: 92px;
+    }
+    .radio-icon
+    {
+        width: 60px;
+        height: 60px;
+        right: -20px;
+    }
+    .radio-icon i
+    {
+        font-size: 30px;
+    }
+    .next-prev
+    {
+        padding: 10px;
+    }
+    .next-prev button
+    {
+        width: 48%;
+        font-size: 12px;
+        height: 55px;
+    }
+
+}

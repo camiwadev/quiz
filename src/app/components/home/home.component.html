@@ -1,0 +1,89 @@
+<main class="overflow-hidden">
+
+        <!-- countdown -->
+        <div id="countdown" class="coming-soon-countdown">
+            loading...
+        </div>
+
+        <!-- step 1 -->
+        <section class="steps">
+            <div class="row h-100">
+                <div class="col-md-5 p-0 tab-100 order-c">
+                    <div class="side">
+
+                        <!-- next prev button
+                        <div class="next-prev">
+                            <button type="button" class="next" id="step1btn">next question<i class="fa-solid fa-arrow-right"></i></button>
+                        </div> -->
+
+                        <!-- side background -->
+                        <div class="logo-container">
+                            <img src="assets/quiz/images/logo.png" alt="Camiwa Logo" class="logo">
+                        </div>
+                        <img class="side-bg" src="assets/quiz/images/inicio.jpg" alt="side image">
+                    </div>
+                </div>
+                <div class="col-md-7 p-0 tab-100">
+                    <div class="steps-inner">
+                       
+                        <!-- step bar -->
+                        <div class="step-bar">
+                            <div class="fill"></div>
+                        </div>
+                         
+                        <div class="form-inner">
+                            <div class="step-count">
+                                Encuesta para apoyar la implementación eficiente de Camiwa
+                            </div>
+
+                            <!-- Question -->
+                            <h1 class="quiz-question">
+                                ¿Eres un profesional especializado en alguna área de la salud o eres un paciente?</h1>
+
+                            <!-- form fields -->
+                            <fieldset>
+                                <div class="radio-field bounce-left" (click)="global.setRoute('specialityquiz')">
+                                    <input type="radio" name="op2" value="Russia">
+                                    <label class="op1">Especialista</label>
+                                    <div class="radio-icon">
+                                        <i class="fa-solid fa-user-md"></i>
+                                    </div>
+                                </div>
+                                <div class="radio-field bounce-left delay-100" (click)="global.setRoute('patientquiz')">
+                                    <input type="radio" name="op2" value="America">
+                                    <label class="op2">Paciente</label>
+                                    <div class="radio-icon">
+                                        <i class="fa-solid fa-heartbeat "></i>
+                                    </div>
+                                </div>
+                                
+                            </fieldset>
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+            <!-- result -->
+   <!--  <div class="loadingresult">
+        <img src="assets/quiz/images/loading.gif" alt="loading">
+    </div> -->
+
+   <!--  <div class="thankyou-page">
+        <header class="thankyouheader">
+            <h2>
+                Quiz has been taken
+            </h2>
+        </header>
+        <main class="thankyou-page-inner">
+            <img src="assets/quiz/images/thankyou-check.png" alt="">
+            <span>Your answer has been submitted</span>
+            <h1>Thankyou for taking Quiz</h1>
+            <div class="subscribe">
+                <input type="text" placeholder="Your Email">
+                <button type="button">subscribe now</button>
+            </div>
+        </main>
+    </div> -->
+</main>

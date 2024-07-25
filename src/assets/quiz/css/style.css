@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sen:wght@400;700;800&display=swap');
+
+:root
+{
+    --primary-color: #00a08f;
+    --secondary-color: ;
+    --text-color: ;
+    --field-color: ;
+}
+
+
+
+body
+{
+    font-family: "Jost";
+    width: 100%;
+    background-color: rgb(238, 238, 238);
+}
+form
+{
+    min-height: 100vh;
+    width: 100%;
+    display: grid;
+    position: relative;
+}
+.steps
+{
+    height: 100%;
+}
+
+
+.side
+{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 35px;
+}
+.side-bg
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+#countdown
+{
+    font-size: 28px;
+    color: rgb(0, 10, 56);
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 220px;
+    display: flex;
+    min-height: auto;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-bottom: 80px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 10px;
+    position: absolute;
+    top: 35px;
+    left: 35px;
+    z-index: 1000;
+}
+
+#countdown .timer
+{
+    width: 33.33%;
+    height: auto;
+    line-height: normal;
+    border-left: solid 1px rgb(216, 216, 216);
+    line-height: 1.5;
+}
+#countdown span
+{
+    display: block;
+    word-break: break-all;
+    font-size: 12px;
+    line-height: 10px;
+} 
+
+.next-prev
+{
+    position: absolute;
+    left: 35px;
+    bottom: 35px;
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 100;
+}
+.next-prev button
+{
+    border: solid 2px rgb(186,186,186);
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    width: 225px;
+    height: 75px;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.next-prev .next
+{
+    background-color: var(--primary-color);
+    border: 0;
+    color: rgb(255, 255, 255);
+    margin-left: 20px;
+}
+.next-prev button i
+{
+    margin: 0 8px;
+    position: relative;
+    top: 1px;
+
+}
+.steps-inner
+{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.step-bar
+{
+    background-color: rgb(216, 216, 216);
+    width: 20px;
+    height: 100%;
+
+}
+.step-bar .fill
+{
+    width: 100%;
+    height: 20%;
+    background-color: var(--primary-color);
+    transition: 0.5s;
+}
+
+
+
+.form-inner
+    {
+    width: -webkit-fill-available;
+    display: grid;
+    align-content: center;
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+    padding: 80px 0;
+}
+.step-count
+{
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+.quiz-question
+{
+    font-size: 35px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}  
+fieldset
+{
+    margin-top: 25px;
+}
+.radio-field
+{
+    width: 95%;
+    height: 85px;
+    position: relative;
+    margin-bottom: 20px;
+    display: grid;
+    align-content: center;
+    padding: 30px;
+}
+.radio-field input
+{
+    -webkit-appearance: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    overflow: hidden;
+}
+.radio-field input::before
+{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    background-color: var(--primary-color);
+    height: 100%;
+    transition: 0.5s;
+}
+.radio-field label
+{
+    font-size: 25px;
+    font-weight: bold;
+    position: relative;
+    z-index: 10;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    color: rgb(190, 190, 190);
+}
+.radio-field label::before
+{
+    content: "X :";
+    display: inline-block;
+    font-size: 42px;
+    font-weight: bold;
+    margin-right: 50px;
+
+}
+.radio-field .op1::before
+{
+    content: "A :";
+}
+.radio-field .op2::before
+{
+    content: "B :";
+}
+.radio-field .op3::before
+{
+    content: "C :";
+}
+.radio-field .op4::before
+{
+    content: "D :";
+}
+.radio-icon
+{
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 14px 46px 0px rgba(0, 0, 0, 0.09);
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    right: -40px;
+    top: 16px;
+    display: grid;
+    place-content: center;
+    overflow: hidden;
+    pointer-events: none;
+
+}
+.radio-icon::before
+{
+    content: "";
+    width: 0;
+    transition: 0.5s;
+    transition-delay: 0.3s;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--primary-color);
+}
+.radio-icon i
+{
+    color: rgb(190, 190, 190);
+    font-size: 40px;
+    position: relative;
+    z-index: 10;
+    transition: 0.5s;
+}
+
+
+
+.radio-field input:checked::before
+{
+    width: 100%;
+
+}
+.radio-field input:checked~label
+{
+    color: rgb(255, 255, 255);
+}
+.radio-field input:checked~.radio-icon::before
+{
+    width: 100%;
+}
+.radio-field input:checked~.radio-icon i
+{
+    color: rgb(255,255,255);
+    transition-delay: 0.3s;
+}
+
+
+#error div
+{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}

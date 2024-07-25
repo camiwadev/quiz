@@ -1,0 +1,64 @@
+.next-prev1 {
+    position: absolute;
+    left: 36px;
+    bottom: 80%;
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 100;
+}
+
+.next-prev1 button {
+    border: solid 2px rgb(186, 186, 186);
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    width: 225px;
+    /* height: 75px; */
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.next-prev2 {
+    position: absolute;
+    right: 36px;
+    bottom: 10%;
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 100;
+}
+.next-prev2 button {
+    border: solid 2px rgb(186, 186, 186);
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    width: 225px;
+    /* height: 75px; */
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+    .next-prev1 {
+        position: absolute;
+        left: 36px;
+        bottom: 90%;
+        width: auto;
+        display: flex;
+        flex-wrap: wrap;
+        z-index: 100;
+    }
+    .next-prev2 {
+        position: absolute;
+        right: 75px;
+    bottom: 12%;
+        width: auto;
+        display: flex;
+        flex-wrap: wrap;
+        z-index: 100;
+    }
+    
+}
