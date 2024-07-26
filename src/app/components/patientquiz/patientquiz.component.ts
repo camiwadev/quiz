@@ -19,6 +19,8 @@ export class PatientquizComponent {
   submitted= false;
   ngFormPatients: FormGroup;
   public isError = false;
+    currentStep: number = 1; // Paso actual
+
 constructor(
   public global: GlobalService,
   public virtualRouter: virtualRouter,
@@ -27,12 +29,19 @@ constructor(
   public dataApiService: DataApiService,
   public yeoman: Yeoman
 ){this.ngFormPatients = this.formBuilder.group({
-  r1: ['', Validators.requiredTrue],
-  r2: ['', Validators.requiredTrue],
-  r3: ['', Validators.requiredTrue],
-  r4: ['', Validators.requiredTrue],
-  r5: ['', Validators.requiredTrue],
-  r6: ['', Validators.requiredTrue]
+  p1: ['', Validators.requiredTrue],
+  p2: ['', Validators.requiredTrue],
+  p3: ['', Validators.requiredTrue],
+  p4: ['', Validators.requiredTrue],
+  p5: ['', Validators.requiredTrue],
+  p6: ['', Validators.requiredTrue],
+  p7: ['', Validators.requiredTrue],
+  p8: ['', Validators.requiredTrue],
+  p9: ['', Validators.requiredTrue],
+  p10: ['', Validators.requiredTrue],
+  p11: ['', Validators.requiredTrue],
+  p12: ['', Validators.requiredTrue]
+
 });
 }
 
@@ -42,7 +51,7 @@ return this.ngFormPatients.controls;
 
 viewDetail(specialist:any){
 this.global.previewRequest=specialist;
-this.global.setRoute('specialistdetail')
+this.global.setRoute('')
 }
 
 quizsPatients() {
@@ -69,9 +78,9 @@ this.dataApiService.sendPatient(data).subscribe(
       text: 'Encuesta enviada, Gracias por su participación.'
     }).then(() => {
       // Limpiar los valores para futuros usos
-      this.global.request = '';
+      /* this.global.request = '';
       this.yeoman.allrequest.push(response);
-      this.yeoman.allrequest = [...this.yeoman.allrequest];
+      this.yeoman.allrequest = [...this.yeoman.allrequest]; */
       this.isError = false;
       
       // Reiniciar el formulario
@@ -97,19 +106,26 @@ this.dataApiService.sendPatient(data).subscribe(
 }
 ngOnInit(): void {
 this.ngFormPatients = this.formBuilder.group({
-  r1: ['', Validators.requiredTrue],
-  r2: ['', Validators.requiredTrue],
-  r3: ['', Validators.requiredTrue],
-  r4: ['', Validators.requiredTrue],
-  r5: ['', Validators.requiredTrue],
-  r6: ['', Validators.requiredTrue]
+  p1: ['', Validators.requiredTrue],
+  p2: ['', Validators.requiredTrue],
+  p3: ['', Validators.requiredTrue],
+  p4: ['', Validators.requiredTrue],
+  p5: ['', Validators.requiredTrue],
+  p6: ['', Validators.requiredTrue],
+  p7: ['', Validators.requiredTrue],
+  p8: ['', Validators.requiredTrue],
+  p9: ['', Validators.requiredTrue],
+  p10: ['', Validators.requiredTrue],
+  p11: ['', Validators.requiredTrue],
+  p12: ['', Validators.requiredTrue]
+
 });
 }
 
 onIsError(): void {
-this.isError = true;
-setTimeout(() => {
-  this.isError = false;
-}, 4000);
-}
+  this.isError = true;
+  /* setTimeout(() => {
+    this.isError = false;
+  }, 4000); */
+  }
 }

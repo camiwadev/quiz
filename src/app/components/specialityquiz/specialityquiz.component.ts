@@ -32,7 +32,12 @@ constructor(
   r3: ['', Validators.requiredTrue],
   r4: ['', Validators.requiredTrue],
   r5: ['', Validators.requiredTrue],
-  r6: ['', Validators.requiredTrue]
+  r6: ['', Validators.requiredTrue],
+  r7: ['', Validators.requiredTrue],
+  r8: ['', Validators.requiredTrue],
+  r9: ['', Validators.requiredTrue],
+  r10: ['', Validators.requiredTrue],
+  r11: ['', Validators.requiredTrue]
 });
 }
 
@@ -102,7 +107,12 @@ this.ngFormRequest = this.formBuilder.group({
   r3: ['', Validators.requiredTrue],
   r4: ['', Validators.requiredTrue],
   r5: ['', Validators.requiredTrue],
-  r6: ['', Validators.requiredTrue]
+  r6: ['', Validators.requiredTrue],
+  r7: ['', Validators.requiredTrue],
+  r8: ['', Validators.requiredTrue],
+  r9: ['', Validators.requiredTrue],
+  r10: ['', Validators.requiredTrue],
+  r11: ['', Validators.requiredTrue]
 });
 }
 

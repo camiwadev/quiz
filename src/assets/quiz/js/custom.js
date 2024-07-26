@@ -32,6 +32,63 @@ function showActiveStep()
     }
 }
 
+var divs = $('.show-section1 section');
+var now = 0; // currently shown div
+divs.hide().first().show(); // hide all divs except first
+
+//show active step
+function showActiveStep1()
+{
+    if ($('#step1').is(':visible'))
+    {
+        $(".step-bar .fill").css('height', '20%');
+    }
+    else if ($('#step2').is(':visible'))
+    {
+        $(".step-bar .fill").css('height', '40%');
+    }
+    else if ($('#step3').is(':visible'))
+    {
+        $(".step-bar .fill").css('height', '60%');
+    }
+    else if ($('#step4').is(':visible'))
+    {
+        $(".step-bar .fill").css('height', '80%');
+    }
+    else if ($('#step5').is(':visible'))
+    {
+        $(".step-bar .fill").css('height', '100%');
+    }
+    else if ($('#step6').is(':visible'))
+    {
+        $(".step-bar .fill").css('height', '60%');
+    }
+    else if ($('#step7').is(':visible'))
+    {
+        $(".step-bar .fill").css('height', '60%');
+    }
+    else if ($('#step8').is(':visible'))
+    {
+        $(".step-bar .fill").css('height', '70%');
+    }
+    else if ($('#step9').is(':visible'))
+    {
+        $(".step-bar .fill").css('height', '70%');
+    }
+    else if ($('#step10').is(':visible'))
+    {
+        $(".step-bar .fill").css('height', '70%');
+    }
+    else if ($('#step11').is(':visible'))
+    {
+        $(".step-bar .fill").css('height', '70%');
+    }
+    else
+    {
+    console.log("error");
+    }
+}
+
 
 function next()
 {
