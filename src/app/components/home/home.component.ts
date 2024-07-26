@@ -8,7 +8,6 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import { FaqsComponent } from '../faqs/faqs.component';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import Swal from 'sweetalert2';
 import { ReactiveFormsModule, FormBuilder,
@@ -20,7 +19,7 @@ import { Yeoman } from '@app/services/yeoman.service';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule,FaqsComponent, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 
