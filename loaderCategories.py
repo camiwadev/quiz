@@ -1,7 +1,7 @@
 import requests
 
 # URL del endpoint
-url = 'https://db.camiwa.com:8092/api/collections/camiwaCategories/records'
+url = 'https://db.buckapi.com:8090/api/collections/camiwaCategories/records'
 
 # Leer las categorías del archivo de texto
 with open('categories.txt', 'r', encoding='utf-8') as file:

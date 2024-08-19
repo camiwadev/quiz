@@ -2,7 +2,7 @@ import json
 import requests
 
 # URL del endpoint
-url = 'https://db.camiwa.com:8092/api/collections/camiwaSpecialties/records'
+url = 'https://db.buckapi.com:8090/api/collections/camiwaSpecialties/records'
 
 # Leer las especialidades del archivo specialties.txt
 with open('specialties.txt', 'r', encoding='utf-8') as file:

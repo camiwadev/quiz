@@ -26,6 +26,30 @@ function showActiveStep()
     {
         $(".step-bar .fill").css('height', '100%');
     }
+    else if ($('#step6').is(':visible'))
+        {
+            $(".step-bar .fill").css('height', '100%');
+        }
+        else if ($('#step7').is(':visible'))
+            {
+                $(".step-bar .fill").css('height', '100%');
+            }
+            else if ($('#step8').is(':visible'))
+                {
+                    $(".step-bar .fill").css('height', '100%');
+                }
+                else if ($('#step9').is(':visible'))
+                    {
+                        $(".step-bar .fill").css('height', '100%');
+                    }
+                    else if ($('#step10').is(':visible'))
+                        {
+                            $(".step-bar .fill").css('height', '100%');
+                        }
+                        else if ($('#step11').is(':visible'))
+                            {
+                                $(".step-bar .fill").css('height', '100%');
+                            }
     else
     {
     console.log("error");
@@ -41,48 +65,52 @@ function showActiveStep1()
 {
     if ($('#step1').is(':visible'))
     {
-        $(".step-bar .fill").css('height', '20%');
+        $(".step-bar1 .fill").css('height', '20%');
     }
     else if ($('#step2').is(':visible'))
     {
-        $(".step-bar .fill").css('height', '40%');
+        $(".step-bar1 .fill").css('height', '40%');
     }
     else if ($('#step3').is(':visible'))
     {
-        $(".step-bar .fill").css('height', '60%');
+        $(".step-bar1 .fill").css('height', '60%');
     }
     else if ($('#step4').is(':visible'))
     {
-        $(".step-bar .fill").css('height', '80%');
+        $(".step-bar1 .fill").css('height', '80%');
     }
     else if ($('#step5').is(':visible'))
     {
-        $(".step-bar .fill").css('height', '100%');
+        $(".step-bar1 .fill").css('height', '100%');
     }
     else if ($('#step6').is(':visible'))
     {
-        $(".step-bar .fill").css('height', '60%');
+        $(".step-bar1 .fill").css('height', '60%');
     }
     else if ($('#step7').is(':visible'))
     {
-        $(".step-bar .fill").css('height', '60%');
+        $(".step-bar1 .fill").css('height', '60%');
     }
     else if ($('#step8').is(':visible'))
     {
-        $(".step-bar .fill").css('height', '70%');
+        $(".step-bar1 .fill").css('height', '70%');
     }
     else if ($('#step9').is(':visible'))
     {
-        $(".step-bar .fill").css('height', '70%');
+        $(".step-bar1 .fill").css('height', '70%');
     }
     else if ($('#step10').is(':visible'))
     {
-        $(".step-bar .fill").css('height', '70%');
+        $(".step-bar1 .fill").css('height', '70%');
     }
     else if ($('#step11').is(':visible'))
     {
-        $(".step-bar .fill").css('height', '70%');
+        $(".step-bar1 .fill").css('height', '70%');
     }
+    else if ($('#step12').is(':visible'))
+        {
+            $(".step-bar1 .fill").css('height', '70%');
+        }
     else
     {
     console.log("error");
@@ -177,6 +205,54 @@ var x = setInterval(function() {
 }, 1000);
 
 
+function setupForm(formClass, stepBarClass) {
+    var divs = $(formClass + ' section');
+    var now = 0; // currently shown div
+    divs.hide().first().show(); // hide all divs except first
+
+    function showActiveStep() {
+        var stepPercentages = [0, 20, 40, 60, 80, 100, 100, 100, 100, 100, 100];
+        for (var i = 1; i <= stepPercentages.length; i++) {
+            if ($('#step' + i).is(':visible')) {
+                $(stepBarClass + " .fill").css('height', stepPercentages[i - 1] + '%');
+                return;
+            }
+        }
+        console.log("error");
+    }
+
+    function next() {
+        divs.eq(now).hide();
+        now = (now + 1 < divs.length) ? now + 1 : 0;
+        divs.eq(now).show(); // show next
+        console.log(now);
+        showActiveStep();
+    }
+
+    var totalsteps = $(formClass + ' section').length;
+
+    function nextonclick(nextstep) {
+        $(formClass + ' #step' + nextstep + ' .radio-field input').on('click', function () {
+            if (nextstep < totalsteps) {
+                $(formClass + ' #step' + nextstep + ' .radio-field').removeClass('bounce-left');
+                $(formClass + ' #step' + nextstep + ' .radio-field').addClass('bounce-right');
+                setTimeout(function () {
+                    next();
+                }, 900);
+            } else {
+                showresult();
+            }
+        });
+    }
+
+    for (var i = 1; i <= totalsteps; i++) {
+        nextonclick(i);
+    }
+}
+
+// Inicializa cada formulario por separado
+setupForm('.show-section', '.step-bar');
+setupForm('.show-section1', '.step-bar1');
 
 
 

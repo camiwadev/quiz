@@ -118,7 +118,7 @@ export class GlobalService {
   totalRequests=0;
   modalType:string='';
 
-  private pb = new PocketBase('https://db.camiwa.com:8092');
+  private pb = new PocketBase('https://db.buckapi.com:8090');
   request: any;
 
   uploaderImages: string[] = [];

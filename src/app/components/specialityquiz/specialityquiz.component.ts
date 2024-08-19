@@ -49,7 +49,20 @@ viewDetail(specialist:any){
 this.global.previewRequest=specialist;
 this.global.setRoute('specialistdetail')
 }
+onNext() {
+  this.submitted = true;
 
+  if (this.ngFormRequest.invalid) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Error',
+      text: 'Por favor, complete todos los campos requeridos antes de continuar.',
+    });
+    return; // Detener la ejecución si el formulario es inválido
+  }
+
+  console.log('Formulario válido, continuar a la siguiente sección');
+}
 quizspecialist() {
 this.submitted = true; 
 
